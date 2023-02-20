@@ -35,7 +35,7 @@ const App = () => {
 
       await sendRequest(
         {
-          url: "https://FIREBASE/taskIds.json",
+          url: "https://todo-555a7-default-rtdb.asia-southeast1.firebasedatabase.app/taskIds.json",
         },
         getTaskIds
       );
@@ -105,7 +105,7 @@ const App = () => {
 
     sendRequest(
       {
-        url: "https://FIREBASE/taskIds.json",
+        url: "https://todo-555a7-default-rtdb.asia-southeast1.firebasedatabase.app/taskIds.json",
         method: "PUT",
         body: newTaskIds,
         headers: { "Content-Type": "application/json" },
@@ -195,7 +195,7 @@ const App = () => {
 
     sendRequest(
       {
-        url: "https://FIREBASE/taskIds.json",
+        url: "https://todo-555a7-default-rtdb.asia-southeast1.firebasedatabase.app/taskIds.json",
         method: "PUT",
         body: newTaskIds,
         headers: { "Content-Type": "application/json" },

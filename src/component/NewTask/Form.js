@@ -47,7 +47,7 @@ const Form = (props) => {
 
     sendRequest(
       {
-        url: "https://FIREBASE/taskIds.json",
+        url: "https://todo-555a7-default-rtdb.asia-southeast1.firebasedatabase.app/taskIds.json",
         method: "PUT",
         body: idArray,
         headers: { "Content-Type": "application/json" },

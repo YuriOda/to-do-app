@@ -3,7 +3,8 @@ import { useCallback, useState } from "react";
 const useFetch = () => {
   const [err, setError] = useState(null);
 
-  const url = "https://FIREBASE/tasks.json";
+  const url =
+    "https://todo-555a7-default-rtdb.asia-southeast1.firebasedatabase.app/tasks.json";
 
   const sendRequest = useCallback(async (requestConfig, applyData) => {
     setError(null);
