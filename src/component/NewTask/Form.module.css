@@ -1,0 +1,39 @@
+.title {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.form {
+  background-color: var(--task-background);
+  border-radius: 8px;
+  height: 6.5rem;
+  margin-bottom: 2rem;
+  overflow: hidden;
+
+  display: grid;
+  grid-template-columns: min-content 1fr;
+}
+
+.form::placeholder {
+  color: var(--font-color-placeholder);
+  font-weight: 300;
+}
+
+.invalid input::placeholder {
+  color: red;
+}
+
+.input {
+  color: var(--font-color);
+  font-family: inherit;
+  font-size: inherit;
+  background-color: inherit;
+
+  border: none;
+  outline: none;
+}
+
+.icon:hover {
+  cursor: pointer;
+}

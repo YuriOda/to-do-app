@@ -1,0 +1,15 @@
+.task {
+  background-color: var(--task-background);
+  border-radius: 8px;
+  overflow: hidden;
+
+  box-shadow: 0 1rem 5rem rgba(0, 0, 0, 0.1);
+}
+
+.task input {
+  background-color: inherit;
+}
+
+.active {
+  color: blue;
+}

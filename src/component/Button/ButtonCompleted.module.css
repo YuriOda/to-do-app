@@ -1,0 +1,13 @@
+.btn {
+  width: 2.5rem;
+  height: 2.5rem;
+  margin: 2rem 2.5rem;
+
+  background: linear-gradient(to right bottom, #69bffc, #aa76f2);
+  border: none;
+  border-radius: 50%;
+}
+
+.icon {
+  stroke: white;
+}

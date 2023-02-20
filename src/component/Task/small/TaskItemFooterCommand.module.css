@@ -1,0 +1,19 @@
+.status {
+  border-radius: 8px;
+  box-shadow: 0 1rem 5rem rgba(0, 0, 0, 0.1);
+  margin-top: 1.5rem;
+  padding: 0 2rem;
+
+  height: 5rem;
+  background-color: var(--task-background);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.status span {
+  color: var(--font-color-footer);
+  margin: auto 1rem;
+
+  cursor: pointer;
+}

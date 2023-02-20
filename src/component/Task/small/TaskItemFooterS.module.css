@@ -1,0 +1,14 @@
+.task-footer {
+  color: var(--font-color-footer);
+  font-size: 1.35rem;
+  height: 5rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto 2rem;
+}
+
+.clear {
+  cursor: pointer;
+}

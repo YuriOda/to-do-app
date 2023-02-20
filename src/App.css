@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400;600;700&display=swap");
+
+:root {
+  --background-image: url(./assets/bg-desktop-light.jpg);
+  --background-color: white;
+  --task-background: white;
+
+  --font-color: #494b59;
+  --font-color-completed: #d4d3d8;
+  --font-color-footer: #92929a;
+  --font-color-footer-active: #4c7bdd;
+  --font-color-placeholder: rgb(172, 172, 172);
+}
+
+body[data-theme="dark"] {
+  --background-image: url(./assets/bg-desktop-dark.jpg);
+  --background-color: #181824;
+  --task-background: #25273c;
+
+  --font-color: #b9bbd4;
+  --font-color-completed: #5e6079;
+  --font-color-footer: #5e6079;
+  --font-color-placeholder: rgb(172, 172, 172);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+  background-repeat: no-repeat;
+  background-position: top;
+
+  background-image: var(--background-image);
+  background-color: var(--background-color);
+}
+
+h1 {
+  color: white;
+  font-size: 4rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1.5rem;
+  margin: 8rem auto 4rem 0;
+}
+
+h3 {
+  font-size: 1.75rem;
+  font-weight: 400;
+}
+
+@media only screen and (max-width: 900px) {
+  html {
+    font-size: 56.25%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  html {
+    font-size: 43.75%;
+  }
+}
