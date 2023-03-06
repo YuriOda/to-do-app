@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <Fragment>
       <p className={classes.explanation}>Drag and drop to reorder list</p>
-      <div className={classes.attribution}>
+      {/* <div className={classes.attribution}>
         Coded by{" "}
         <a
           href="https://yurioda.dev/"
@@ -15,7 +15,7 @@ const Footer = () => {
           Yuri Oda
         </a>
         .
-      </div>
+      </div> */}
     </Fragment>
   );
 };
