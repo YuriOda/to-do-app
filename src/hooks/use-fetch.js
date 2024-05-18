@@ -3,35 +3,42 @@ import { useCallback, useState } from "react";
 const useFetch = () => {
   const [err, setError] = useState(null);
 
-  const baseUrl = process.env.NEXT_PUBLIC_FIREBASE_URL;
+  const baseUrl = process.env.REACT_APP_FIREBASE_URL;
+  console.log(baseUrl);
+  console.log(process.env.REACT_APP_SAMPLE);
   const endpoint = "tasks.json";
   const url = baseUrl + endpoint;
 
-  const sendRequest = useCallback(async (requestConfig, applyData) => {
-    setError(null);
+  const sendRequest = useCallback(
+    async (requestConfig, applyData) => {
+      setError(null);
 
-    try {
-      const response = await fetch(
-        requestConfig.url ? requestConfig.url : url,
-        {
-          method: requestConfig.method ? requestConfig.method : "GET",
-          headers: requestConfig.headers ? requestConfig.headers : {},
-          body: requestConfig.body ? JSON.stringify(requestConfig.body) : null,
+      try {
+        const response = await fetch(
+          requestConfig.url ? requestConfig.url : url,
+          {
+            method: requestConfig.method ? requestConfig.method : "GET",
+            headers: requestConfig.headers ? requestConfig.headers : {},
+            body: requestConfig.body
+              ? JSON.stringify(requestConfig.body)
+              : null,
+          }
+        );
+
+        if (!response.ok) {
+          throw new Error("Requests failed!");
         }
-      );
 
-      if (!response.ok) {
-        throw new Error("Requests failed!");
+        const data = await response.json();
+
+        applyData(data);
+      } catch (error) {
+        console.log(error);
+        setError(error.message || "Something went wrong in sending!");
       }
-
-      const data = await response.json();
-
-      applyData(data);
-    } catch (error) {
-      console.log(error);
-      setError(error.message || "Something went wrong in sending!");
-    }
-  }, []);
+    },
+    [url]
+  );
 
   return {
     err,

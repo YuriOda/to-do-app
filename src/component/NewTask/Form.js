@@ -45,7 +45,7 @@ const Form = (props) => {
     idArray.push(id);
     putTaskIdsArray(idArray);
 
-    const baseUrl = process.env.NEXT_PUBLIC_FIREBASE_URL;
+    const baseUrl = process.env.REACT_APP_FIREBASE_URL;
     const endpoint = "taskIds.json";
     sendRequest(
       {
