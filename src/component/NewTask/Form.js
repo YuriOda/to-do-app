@@ -45,9 +45,11 @@ const Form = (props) => {
     idArray.push(id);
     putTaskIdsArray(idArray);
 
+    const baseUrl = process.env.NEXT_PUBLIC_FIREBASE_URL;
+    const endpoint = "taskIds.json";
     sendRequest(
       {
-        url: "https://todo-555a7-default-rtdb.asia-southeast1.firebasedatabase.app/taskIds.json",
+        url: baseUrl + endpoint,
         method: "PUT",
         body: idArray,
         headers: { "Content-Type": "application/json" },

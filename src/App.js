@@ -33,9 +33,11 @@ const App = () => {
         putTaskIdsArray(taskIds);
       };
 
+      const baseUrl = process.env.NEXT_PUBLIC_FIREBASE_URL;
+      const endpoint = "taskIds.json";
       await sendRequest(
         {
-          url: "https://todo-555a7-default-rtdb.asia-southeast1.firebasedatabase.app/taskIds.json",
+          url: baseUrl + endpoint,
         },
         getTaskIds
       );
@@ -103,9 +105,11 @@ const App = () => {
     putTaskIdsArray(newTaskIds);
     setNumOfTasks((prevState) => prevState - 1);
 
+    const baseUrl = process.env.NEXT_PUBLIC_FIREBASE_URL;
+    const endpoint = "taskIds.json";
     sendRequest(
       {
-        url: "https://todo-555a7-default-rtdb.asia-southeast1.firebasedatabase.app/taskIds.json",
+        url: baseUrl + endpoint,
         method: "PUT",
         body: newTaskIds,
         headers: { "Content-Type": "application/json" },
@@ -193,9 +197,11 @@ const App = () => {
     newTaskIds.splice(destinationIndex, 0, draggableId);
     putTaskIdsArray(newTaskIds);
 
+    const baseUrl = process.env.NEXT_PUBLIC_FIREBASE_URL;
+    const endpoint = "taskIds.json";
     sendRequest(
       {
-        url: "https://todo-555a7-default-rtdb.asia-southeast1.firebasedatabase.app/taskIds.json",
+        url: baseUrl + endpoint,
         method: "PUT",
         body: newTaskIds,
         headers: { "Content-Type": "application/json" },
